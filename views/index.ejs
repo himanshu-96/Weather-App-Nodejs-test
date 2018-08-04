@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8">
+		<title>Weather App</title>
+
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  	</head>
+  	<body>
+    	<div class="container-fluid">
+			<br>
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 offset-lg-2 offset-md-2 offset-sm-2">
+					<form action="/" method="post">
+						<div class="row">
+							<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon1">City</span>
+									</div>
+									<input name="city" type="text" class="form-control" placeholder="Enter a City" required>
+								</div>
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+								<input type="submit" class="btn btn-primary" value="Get Weather">
+							</div>
+						</div>
+        			</form>
+				</div> 
+			</div>
+			<hr>
+			<br>
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 offset-lg-2 offset-md-2 offset-sm-2">
+					<div class="row">
+						<div class="col-md-4 offset-md-4">
+							<h2><b>weather</b></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 offset-lg-2 offset-md-2 offset-sm-2">
+					<fieldset>
+						<% if(locals.city){ %>
+							<div class="row">
+								<div class="col-md-6">
+									<p>CITY</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= city %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>LONGITUDE</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= lon %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>LATITUDE</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= lat %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>TEMPERATURE</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= temp %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>MIN TEMPERATURE</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= temp_min %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>MAX TEMPERATURE</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= temp_max %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>HUMIDITY</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= humidity %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>PRESSURE</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= pressure %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>WIND SPEED</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= speed %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>CLOUDS</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= clouds %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<p>VISIBILITY</p>
+								</div>
+								<div class="col-md-6">
+									<b><p><%= visibility %></p></b>
+								</div>
+							</div>
+							<div class="row">
+								<p><%= error %></p>
+							</div>
+						<% } %>
+					</fieldset>
+				</div> 
+			</div>    
+    	</div>
+  	</body>
+</html>
